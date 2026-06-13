@@ -1,0 +1,18 @@
+[package]
+name = "spatree"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/voxell-tech/spatree"
+description = "Fast 2D spatial indexing using Morton codes."
+keywords = ["bvh", "spatial", "hash", "morton", "rectangle"]
+categories = ["gui", "data-structures", "no-std"]
+readme = "README.md"
+
+[dependencies]
+kurbo = { version = "0.13.1", default-features = false }
+
+[features]
+default = ["std"]
+std = ["kurbo/std"]
+libm = ["kurbo/libm"]
